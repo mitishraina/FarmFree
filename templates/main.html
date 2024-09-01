@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css')}}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="{{ url_for('static', filename='images/FarmFree.png')}}" alt="Company Logo">
+        </div>
+        <div class="header-options">
+            <select id="language-selector">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="or">Odia</option>
+            <option value="te">Telugu</option>
+            <option value="bn">Bengali</option>
+            <option value="mr">Marathi</option>
+            <option value="gu">Gujarati</option>
+            <option value="kn">Kannada</option>
+            <option value="ml">Malayalam</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            </select>
+            <button id="login-button">Login</button>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">FarmFree Mandis</a></li>
+            <li><a href="#">Stakeholders</a></li>
+            <li><a href="#">Aspirational Districts</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Payments & Transactions</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>FarmFree is a dedicated platform designed to bridge the gap between farmers and buyers, ensuring secure, transparent, and efficient contract farming agreements. By providing a reliable marketplace, we empower farmers to connect directly with potential buyers, negotiate fair prices, and secure timely payments. Our goal is to stabilize farm incomes and reduce market risks, helping farmers grow their businesses with confidence.</p>
+                <p>Join us in transforming the future of farming through innovation and collaboration!
+            </p>
+        </div>
+    </section>
+
+    <!-- Section with Toggle Down Lists -->
+    <section id="filter-section">
+        <h2>Filter Options</h2>
+        <div class="filter-container">
+            <div class="filter-item">
+                <button class="filter-btn" onclick="toggleDropdown('priceDropdown')">Prices</button>
+                <div id="priceDropdown" class="dropdown-content">
+                    <a href="#">Price 1</a>
+                    <a href="#">Price 2</a>
+                    <a href="#">Price 3</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" onclick="toggleDropdown('commodityDropdown')">Commodity</button>
+                <div id="commodityDropdown" class="dropdown-content">
+                    <a href="#">Commodity 1</a>
+                    <a href="#">Commodity 2</a>
+                    <a href="#">Commodity 3</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" onclick="toggleDropdown('stateDropdown')">State</button>
+                <div id="stateDropdown" class="dropdown-content">
+                    <a href="#">State 1</a>
+                    <a href="#">State 2</a>
+                    <a href="#">State 3</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" onclick="toggleDropdown('marketDropdown')">Market</button>
+                <div id="marketDropdown" class="dropdown-content">
+                    <a href="#">Market 1</a>
+                    <a href="#">Market 2</a>
+                    <a href="#">Market 3</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                  <h3>Online Trading</h3>
+                  <p>Farmers can sell their produce online, reaching a wider market.</p>
+                </div>
+                <div class="feature">
+                  <h3>Price Transparency</h3>
+                  <p>Prices are displayed online, giving farmers and traders a clear picture of the market.</p>
+                </div>
+                <div class="feature">
+                  <h3>Reduced Transaction Costs</h3>
+                  <p>Online trading reduces the need for physical intermediaries, resulting in lower transaction costs.</p>
+                </div>
+                <div class="feature">
+                  <h3>Improved Market Access</h3>
+                  <p>Farmers can access markets across the country, expanding their reach and increasing their income.</p>
+                </div>
+              </div>
+            </div>
+            
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2 id="connect">Connect With Us</h2>
+            <p>Stay updated with our latest news and offerings. Follow us on our social media channels.</p>
+            <div class="social-links">
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 FarmFree. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="chatbox">
+        <div class="chat-header">
+            <h4>Chat With Us</h4>
+            <span id="close-chat">&times;</span>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input-field" placeholder="Type your message..." />
+                <button id="send-chat-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbox Toggle Button -->
+    <button id="chat-toggle-btn" class="chat-toggle-btn">Chat With Us</button>
+
+    <!-- Link to External JS File -->
+    <script src="{{ url_for('static', filename='main.js')}}"></script>
+</body>
+</html>

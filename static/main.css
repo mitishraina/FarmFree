@@ -1,0 +1,372 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #2b542c;
+    color: #fff;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+    
+}
+
+#language-selector {
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login-button {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #2b542c;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Navbar */
+nav {
+    background-color: #3c763d;
+    padding: 10px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list li:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* Sections */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(55, 118, 69, 0.8);
+    border-radius: 4px;
+}
+
+h2 {
+    color: #111e12;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+/* About Section */
+#about {
+    background-image: url(https://i.postimg.cc/3JzDnGnv/sihback.jpg);
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    height: 55vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: bolder;
+    font-size: 30px;
+    animation: changeBackground 15s infinite; 
+}
+
+@keyframes changeBackground {
+    0% { background-image: url('/static/images/farmer1.jpg'); }
+    25% { background-image: url('/static/images/farmer2.webp'); }
+    50% { background-image: url('/static/images/farmer3.png'); } 
+    75% { background-image: url('/static/images/farmer4.png'); }
+    100% { background-image: url('/static/images/farmer1.jpg'); } 
+}
+
+
+#about p {
+    font-size: 25px;
+    line-height: 1.6;
+}
+/* Filter Section */
+#filter-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#filter-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2b542c;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    position: relative;
+    width: 200px;
+}
+
+.filter-btn {
+    background-color: #2b542c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-btn:after {
+    content: '\25BC'; /* Down arrow */
+    float: right;
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+/* Features Section */
+#features {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #dff0d8;
+    padding: 20px;
+    border-radius: 5px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .feature {
+        width: 100%;
+    }
+}
+/* Footer */
+footer {
+    background-color: #2b542c;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+footer .social-links {
+    margin-bottom: 20px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links i{
+    color: white;
+}
+/* footer .social-links i  {
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: black;
+} */
+#connect{
+    color: #f9f9f9;
+}
+/* Chatbox Toggle Button */
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #269627;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none; /* Initially hidden */
+    z-index: 1001;
+}
+
+.chat-header {
+    background-color: #22b824;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+}
+
+#close-chat {
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat-messages {
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input-field {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-chat-btn {
+    padding: 5px 10px;
+    background-color: #2b542c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logo {
+    height: 150px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #213c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: #333;
+}
+
+.social-links i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 8px;
+}

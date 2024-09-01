@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmFresh</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='text.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <img src="{{ url_for('static', filename='images/FarmFree.png') }}" alt="FarmFresh logo" class="image">
+            <h1 class="main-text">A reliable platform for FarmFresh items at your doorstep.</h1>
+            <h2 class="sub-text">Contracts that Cultivate success</h2>
+            <div class="buttons">
+                <a href="{{ url_for('farmer_login') }}" class="button farmer">I'm a Farmer</a>
+                <a href="{{ url_for('buyer') }}" class="button buyer">I'm a Buyer</a>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static',filename='text.js')}}"></script>
+</body>
+</html>
+

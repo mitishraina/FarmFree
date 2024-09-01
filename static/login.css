@@ -1,0 +1,105 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #a7eb5a, #4caf50, #1d5128);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #185a9d;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #185a9d;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #388e3c;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.links a {
+    color: #185a9d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Interactive text styles */
+.interactive-text {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.interactive-text:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.interactive-text-2 {
+    display: inline-block;
+}
+
+.google-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #4caf50;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.google-btn img {
+    width: 25px;
+    margin-right: 100px;
+}

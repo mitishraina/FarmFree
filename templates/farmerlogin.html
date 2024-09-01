@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer KYC Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='farmerlogin.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/FarmFree.png') }}" alt="FarmFresh Logo">
+        </div>
+        <h1>Farmer KYC Authentication for Vegetable Selling</h1>
+        <p>Ensure your identity with our trusted platform.</p>
+        <div class="form-container">
+            <form id="farmerKYCForm" method="POST" action="{{ url_for('submit_farmer') }}">
+                <!-- Personal Information -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Contact Information -->
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+
+                <!-- Address Details -->
+                <label for="permanentAddress">Permanent Address:</label>
+                <textarea id="permanentAddress" name="permanentAddress" required></textarea>
+                
+                <label for="currentAddress">Current Address (if different):</label>
+                <textarea id="currentAddress" name="currentAddress"></textarea>
+                
+                <!-- Identification Documents -->
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="text" id="aadhar" name="aadhar" required>
+                
+                <label for="pan">PAN Card Number:</label>
+                <input type="text" id="pan" name="pan">
+
+                <!-- Agricultural Information -->
+                <label for="farmlandSize">Farmland Size (in Acres):</label>
+                <input type="text" id="farmlandSize" name="farmlandSize" required>
+                
+                <label for="farmLocation">Location of Farmland:</label>
+                <input type="text" id="farmLocation" name="farmLocation" required>
+                
+                <label for="cropsGrown">Types of Vegetables Grown:</label>
+                <textarea id="cropsGrown" name="cropsGrown" required></textarea>
+
+                <!-- Banking Information -->
+                <label for="bankAccount">Bank Account Number:</label>
+                <input type="text" id="bankAccount" name="bankAccount" required>
+                
+                <label for="ifsc">IFSC Code:</label>
+                <input type="text" id="ifsc" name="ifsc" required>
+                
+                <label for="upi">UPI ID:</label>
+                <input type="text" id="upi" name="upi">
+                
+                <!-- Business Details -->
+                <label for="gst">GST Number (if applicable):</label>
+                <input type="text" id="gst" name="gst">
+                
+                <label for="marketReg">Market Registration ID:</label>
+                <input type="text" id="marketReg" name="marketReg">
+
+                <!-- Supporting Documents -->
+                <label for="kycDocument">Upload KYC Document:</label>
+                <input type="file" id="kycDocument" name="kycDocument" required>
+                
+                <label for="photo">Upload Recent Passport Size Photo:</label>
+                <input type="file" id="photo" name="photo" required>
+                
+                <button type="submit">Submit KYC</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='farmerlogin.js') }}"></script>
+</body>
+</html>

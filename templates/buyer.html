@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer KYC Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='buyer.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/FarmFree.png') }}" alt="FarmFresh Logo">
+        </div>
+        <h1>Buyer KYC Authentication</h1>
+        <p>Join our platform to access fresh farm produce.</p>
+        <div class="form-container">
+            <form id="buyerKYCForm" method="POST" action="{{ url_for('submit_buyer') }}">
+                <!-- Personal Information -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Contact Information -->
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Address Details -->
+                <label for="residentialAddress">Residential Address:</label>
+                <textarea id="residentialAddress" name="residentialAddress" required></textarea>
+                
+                <label for="shippingAddress">Shipping Address (if different):</label>
+                <textarea id="shippingAddress" name="shippingAddress"></textarea>
+
+                <!-- Identification Documents -->
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="text" id="aadhar" name="aadhar" required>
+                
+                <label for="pan">PAN Card Number:</label>
+                <input type="text" id="pan" name="pan">
+
+                <!-- Business Information (if applicable) -->
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName">
+                
+                <label for="businessType">Business Type:</label>
+                <input type="text" id="businessType" name="businessType">
+                
+                <label for="gst">GST Number (if applicable):</label>
+                <input type="text" id="gst" name="gst">
+                
+                <label for="businessAddress">Business Address:</label>
+                <textarea id="businessAddress" name="businessAddress"></textarea>
+
+                <!-- Purchase Intentions -->
+                <label for="productsInterested">Products Interested In:</label>
+                <textarea id="productsInterested" name="productsInterested" required></textarea>
+                
+                <label for="purchaseVolume">Average Purchase Volume (in kg):</label>
+                <input type="text" id="purchaseVolume" name="purchaseVolume" required>
+
+                <!-- Supporting Documents -->
+                <label for="kycDocument">Upload KYC Document:</label>
+                <input type="file" id="kycDocument" name="kycDocument" required>
+                
+                <label for="photo">Upload Recent Passport Size Photo:</label>
+                <input type="file" id="photo" name="photo" required>
+                
+                <label for="businessRegistration">Upload Business Registration Certificate (if applicable):</label>
+                <input type="file" id="businessRegistration" name="businessRegistration">
+                
+                <button type="submit">Submit KYC</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='buyer.js') }}"></script>
+</body>
+</html>
