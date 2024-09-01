@@ -3,7 +3,7 @@ from authlib.integrations.flask_client import OAuth
 import logging
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'w\xb0\xbe\x83\xf4`\xaf\xdb0\x88\xafG\x14\xb5\xce\x16\xcf\xe9t\xd0\xd9\rZ\xf5'
+app.config['SECRET_KEY'] = 'w\xb0\xbe\x83\xf4\xaf\xdb0\x88\xafG\x14\xb5\xce\x16\xcf\xe9t\xd0\xd9\rZ\xf5'
 
 # Initialize OAuth
 oauth = OAuth(app)
@@ -40,7 +40,7 @@ def auth_callback():
         return redirect(url_for('text'))
     except Exception as e:
         logging.error("Error during authorization: %s", e)
-        return redirect(url_for('index'))
+        return redirect(url_for('text'))
 
 @app.route('/text')
 def text():
