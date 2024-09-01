@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
 
   if (isLoggedIn) {
     // Redirecting
-    window.location.href = 'seller.html';
+    window.location.href = 'text';
   } else {
     console.log('Login failed');
   }
